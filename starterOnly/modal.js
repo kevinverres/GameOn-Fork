@@ -133,8 +133,8 @@ form.onsubmit = function validate(e) {
   } else {
     let text = this.first.value;
     let length = text.length;
-    if (length <= "2") {
-      showError('.error-first', 'Veuillez entrer 3 caractères ou plus pour le champ du prénom.');
+    if (length < "2") {
+      showError('.error-first', 'Veuillez entrer 2 caractères ou plus pour le prénom.');
     } else if (this.first.value.match(nameValidate)) {
       showError('.error-first', 'Votre prénom n\'est pas valide.');
     } else if (this.first.value.match(nameNumberValidate)) {
@@ -147,8 +147,8 @@ form.onsubmit = function validate(e) {
   } else {
     let text = this.last.value;
     let length = text.length;
-    if (length <= "2") {
-      showError('.error-first', 'Veuillez entrer 3 caractères ou plus pour le champ du nom.');
+    if (length < "2") {
+      showError('.error-first', 'Veuillez entrer 2 caractères ou plus pour le nom.');
 
     } else if (this.last.value.match(nameValidate)) {
       showError('.error-last', 'Votre nom n\'est pas valide.');
